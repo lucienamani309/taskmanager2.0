@@ -9,19 +9,23 @@ export const TaskList = ({
     incompletedTasks,
 
 }) => {
+
+    const taskList = tasksList.map ((task) => (
+        <TaskItem key={task.id} 
+        task={task} 
+        editTask={editTask} 
+        deleteTask={deleteTask} />
+
+    ));
     return (
         <div className="box">
             <h2 className={styles.title}>
                 Il te reste encore {incompletedTasks} tâche à accomplir !</h2>
-                <ul className={styles.container}>
-                    <TaskItem />
-                    <TaskItem />
-                    <TaskItem />
-                    <TaskItem />
-                    <TaskItem />
-                    <TaskItem />
-                    <TaskItem />
+                {tasksList && tasksList.length > 0 && (
+                    <ul className={styles.container}>
+                    {taskList}
                 </ul>
+                )}
         </div>
     );
 };
