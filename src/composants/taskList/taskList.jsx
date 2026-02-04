@@ -2,11 +2,17 @@
 import { useState } from "react";
 import { TaskItem } from "../taskItem/taskItem";
 import styles from "./taskList.module.css"
-export const TaskList = () => {
+export const TaskList = ({
+    tasksList,
+    editTask,
+    deleteTask,
+    incompletedTasks,
+
+}) => {
     return (
         <div className="box">
             <h2 className={styles.title}>
-                Il te reste encore x tâche à accomplir !</h2>
+                Il te reste encore {incompletedTasks} tâche à accomplir !</h2>
                 <ul className={styles.container}>
                     <TaskItem />
                     <TaskItem />
