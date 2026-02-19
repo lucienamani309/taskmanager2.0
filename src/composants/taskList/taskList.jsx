@@ -20,21 +20,21 @@ export const TaskList = ({
         Il te reste encore <span className="important">{incompletedTasks}</span> tâche(s) !
       </h2>
 
-      {/* 👉 Aucune tâche */}
+      {/*  Aucune tâche */}
       {tasksList.length === 0 && (
         <p className={styles.message}>
-          🚀 Aucune tâche pour le moment — ajoute-en une !
+           Aucune tâche pour le moment, ajoute-en une !
         </p>
       )}
 
-      {/* 👉 Toutes complétées */}
+      {/*  Toutes complétées */}
       {allCompleted && (
         <p className={styles.successMessage}>
-          ✅ Bravo ! Toutes les tâches sont terminées !
+           Bravo ! Toutes les tâches sont terminées !
         </p>
       )}
 
-      {/* 👉 Liste normale */}
+      {/*  Liste normale */}
       {tasksList.length > 0 && !allCompleted && (
         <ul className={styles.container}>
           {tasksList.map((task) => (

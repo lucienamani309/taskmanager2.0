@@ -17,7 +17,7 @@ export const TaskInput = ({addTask}) => {
     };
     return (
         <div className={`box ${styles.element}`}>
-            <h2 className={styles.title}>Ajouter une nouvelle tâche</h2>
+            <h2 className={styles.title}>Ajouter une nouvelle tâche!</h2>
             <form className={styles.container} onSubmit={handleAddtask}>
                 <input 
                 type="text"
