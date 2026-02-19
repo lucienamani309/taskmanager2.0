@@ -1,5 +1,7 @@
 
 import styles from "./taskInput.module.css"
+import { useState } from "react";
+
 export const TaskInput = ({addTask}) => {
     const [taskTitle, setTaskTitle] = useState("");
     const handleInputChange = (e) => {

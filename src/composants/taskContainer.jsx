@@ -20,7 +20,7 @@ export const TaskContainer = () => {
     const editTask = (id, completedValue) => {
         setTasksList(
             tasksList.map((task) =>
-                task.id === id ? {...task, completed: completedValue}:
+                task.id === id ? {...task, completed: completedValue} : task
             )
         );
     };
