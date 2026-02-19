@@ -30,7 +30,7 @@ export const TaskContainer = () => {
     };
 
     const getTaskCounts = () => {
-        const completedTasks = tasksList.filter((task) => task.completed)
+        const completedTasks = tasksList.filter((task) => task.completed).length;
         const incompletedTasks = tasksList.length - completedTasks;
         return {
             completedTasks,
