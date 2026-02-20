@@ -1,6 +1,7 @@
 //Le compsant qui va nous permettre d'afficher la liste des tâches
 import { useState } from "react";
 // TaskList.jsx
+// TaskList.jsx
 import { TaskItem } from "../taskItem/taskItem";
 import styles from "./taskList.module.css";
 
@@ -20,22 +21,22 @@ export const TaskList = ({
         Il te reste encore <span className="important">{incompletedTasks}</span> tâche(s) !
       </h2>
 
-      {/*  Aucune tâche */}
+      {/* 👉 Liste vide */}
       {tasksList.length === 0 && (
         <p className={styles.message}>
-           Aucune tâche pour le moment, ajoute-en une !
+         Ajoutez une tâche pour commencer !
         </p>
       )}
 
-      {/*  Toutes complétées */}
+      {/* 👉 Message succès MAIS liste visible */}
       {allCompleted && (
         <p className={styles.successMessage}>
-           Bravo ! Toutes les tâches sont terminées !
+           Toutes les tâches sont complétées !
         </p>
       )}
 
-      {/*  Liste normale */}
-      {tasksList.length > 0 && !allCompleted && (
+      {/* 👉 Liste affichée TOUJOURS si tâches existantes */}
+      {tasksList.length > 0 && (
         <ul className={styles.container}>
           {tasksList.map((task) => (
             <TaskItem
